@@ -1,0 +1,5 @@
+#tracklist {
+    height: 300px;
+    overflow: auto;
+    border-style: inset;
+}

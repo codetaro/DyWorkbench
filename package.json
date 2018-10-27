@@ -1,0 +1,37 @@
+{
+  "name": "dyworkbench",
+  "version": "1.1.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@material/button": "^0.40.1",
+    "@material/checkbox": "^0.40.1",
+    "@material/form-field": "^0.40.1",
+    "@material/list": "^0.40.1",
+    "@rmwc/button": "^3.0.5",
+    "@rmwc/checkbox": "^3.0.5",
+    "@rmwc/list": "^3.0.5",
+    "react": "^16.5.2",
+    "react-dom": "16.5.2",
+    "react-google-maps": "9.4.5",
+    "react-scripts": "2.0.3",
+    "recompose": "^0.30.0"
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.11.1",
+    "standard": "^12.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
