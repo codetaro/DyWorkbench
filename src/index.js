@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import './res/styles.css'
-import Yunba3gTracker from './Yunba3gTracker'
+import Yunba3gTracker from './view/Yunba3gTracker'
 
 function App () {
   return (

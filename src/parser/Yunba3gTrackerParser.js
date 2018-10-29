@@ -20,4 +20,4 @@ export class Yunba3gTrackerParser {
   }
 }
 
-Yunba3gTrackerParser.re = /(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}\.\d{3}).+<<"(.+)">>.+<<"(.+)">>/g
+Yunba3gTrackerParser.re = /(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}\.\d{3}).+<<"(.+)">>.+<<"(.+)">>/

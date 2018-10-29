@@ -8,7 +8,7 @@ const MapComponent = compose(
   withProps({
     googleMapURL: `https://maps.googleapis.com/maps/api/js?key=${key}&v=3.exp&libraries=geometry,drawing,places`,
     loadingElement: <div style={{height: `100%`}}/>,
-    containerElement: <div style={{height: `400px`}}/>,
+    containerElement: <div style={{height: `600px`}}/>,
     mapElement: <div style={{height: `100%`}}/>,
   }),
   withScriptjs,
@@ -19,7 +19,7 @@ const MapComponent = compose(
     defaultCenter={{lat: -34.397, lng: 150.644}}
   >
     {props.pltArr.map(mkr => (
-      <Marker position={{lat: mkr.lat(), lng: mkr.lng()}} onClick={props.handleMarkerClick}/>
+      <Marker key={mkr.timestamp} position={{lat: mkr.lat, lng: mkr.lng}} onClick={props.handleMarkerClick}/>
     ))}
   </GoogleMap>
 )

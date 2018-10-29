@@ -1,7 +1,7 @@
 import React from 'react'
 
-import MapView from './component/MapView'
-import TrackList from './component/TrackList'
+import MapView from '../component/MapView'
+import TrackList from '../component/TrackList'
 
 export default class Yunba3gTracker extends React.Component {
   constructor (props) {

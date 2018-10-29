@@ -60,12 +60,14 @@ export default class TrackList extends React.Component {
       this.state.idxArr.splice(idx, 1)
     }
 
-    this.state.idxArr.sort()
-    let pltArr = []
-    this.state.idxArr.forEach(idx => {
-      let marker = Yunba3gTrackerParser.parse(this.state.posArr[idx])
-      pltArr.push(marker)
+    this.state.idxArr.sort((a, b) => {
+      if (parseInt(a) < parseInt(b)) return -1
+      if (parseInt(a) > parseInt(b)) return 1
+      if (parseInt(a) === parseInt(b)) return 0
     })
+    let pltArr = this.state.idxArr.map(idx =>
+      Yunba3gTrackerParser.parse(this.state.posArr[idx])
+    )
     this.props.map.current.setState({
       pltArr: pltArr
     })
