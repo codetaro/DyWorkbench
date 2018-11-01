@@ -13,9 +13,17 @@ export class Yunba3gTrackerParser {
 
   // helper method
   static _parsePosition (posArray) {
-    let lat, lng
-    lat = (posArray[1] === 'N' ? posArray[0] : '-' + posArray[0]) / 100
-    lng = (posArray[3] === 'E' ? posArray[2] : '-' + posArray[2]) / 100
+    let [lat, lng] = [posArray[0], posArray[2]]
+    let latDD, latMM, lngDD, lngMM
+
+    latDD = Math.floor(lat / 100)
+    latMM = lat - latDD * 100
+    lngDD = Math.floor(lng / 100)
+    lngMM = lng - lngDD * 100
+
+    lat = (posArray[1] === 'N' ? (latDD + latMM / 60) : -(latDD + latMM / 60))
+    lng = (posArray[3] === 'E' ? (lngDD + lngMM / 60) : -(lngDD + lngMM / 60))
+
     return [lat, lng]
   }
 }
