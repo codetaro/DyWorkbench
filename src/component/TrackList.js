@@ -36,10 +36,11 @@ export default class TrackList extends React.Component {
 
     // const cors = 'https://cors-anywhere.herokuapp.com/'
     const endpoint = 'http://abj-elogic-test1.yunba.io:49152/check_gps_log?id='
-    let deviceId = 'a84bcda2'
+    // let device1Id = 'a84bcda2' // device1 was broken
+    let device2Id = '777d6337'
 
-    // fetch(cors + endpoint + deviceId)
-    fetch(endpoint + deviceId)
+    // fetch(cors + endpoint + device2Id)
+    fetch(endpoint + device2Id)
       .then((response) => {
         return response.text()
       })

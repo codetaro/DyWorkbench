@@ -1,10 +1,11 @@
 let calculatorMixin = Base => class extends Base {
-  calc() {}
+  calc () {}
 }
 
 let randomizerMixin = Base => class extends Base {
-  randomize() {}
+  randomize () {}
 }
 
 class Foo {}
+
 class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
