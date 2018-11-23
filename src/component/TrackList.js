@@ -104,5 +104,9 @@ export default class TrackList extends React.Component {
       idxArr: []
       // pltArr: []
     })
+
+    this.props.map.current.setState({
+      pltArr: []
+    })
   }
 }
